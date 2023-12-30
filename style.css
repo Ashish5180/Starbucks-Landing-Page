@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* Css Reset */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: 'Playfair Display', serif;
+ }
+/* Whole Part of website */
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+
+
+/* Navigation menu */
+header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.logo{
+    position: relative;
+    max-width: 80px ;
+}
+header ul{
+    display: flex;
+    position: relative;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    display: inline-block;
+    color: gray;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-left: 66px;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    color: #006241;
+    font-size: 1.75rem;
+}
+
+
+
+
+/* Background Circle */
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #006241;
+    clip-path: circle(600px at right 800px);
+}
+
+
+
+
+/* Body Content */
+.content{
+    position: relative;
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.textbox{
+    position: relative;
+    max-width: 600px;
+}
+.textbox h1{
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 4.75rem;
+}
+.textbox h2{
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.8;
+}
+.textbox h2 span{
+    font-size: 3.7rem;
+    font-weight: 900;
+    color: #006241;
+}
+.textbox p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.textbox a{
+    display: inline-block;
+    font-size: 1rem;
+    background-color: #006241;
+    color: rgb(255, 255, 255);
+    border-radius: 15px 0 15px 0;
+    letter-spacing: 2px;
+    text-decoration: none;
+    margin-top: 16px;
+    padding: 9px 12px;
+    transition: 1s;
+}
+.textbox a:hover{
+    font-size: 1.2rem;
+    /* width: 11.75vw; */
+    background: lightgreen;
+}
+.imgbox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 45px;
+}
+.imgbox img{
+    width: 330px;
+}
+
+
+
+
+/* All Right Side Image Content */
+.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-70%);
+    display: flex;
+}
+
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thumb li:hover{
+    transform: translateY(-15px);
+}
+.thumb li img{
+    max-width: 80px;
+}
+
+/* Social media Content */
+.social {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.social li{
+    list-style: none;
+}
+.social li a{
+    display: inline-block;
+    margin: 12px;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+  /* Website Ends Here */
+
+
+
+
+  /* Media Queries Started */
+
+@media (max-width: 994px){
+    header{
+        padding: 4px 13px;
+    }
+    header .logo{
+        max-width: 50px
+    }
+    header ul{
+        display: none;
+    }
+    .toggle{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-image: url(icons8-menu-50.png);
+        background-position: center;
+        background-repeat: no-repeat;
+       cursor: pointer;
+       z-index: 11;
+    }
+    header ul.navigation.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        z-index: 10;
+       
+    }
+    /* header ul li {
+        list-style: disc;
+    } */
+    header ul li a{
+        font-size: 2rem;
+        color: black;
+        margin:20px;
+        
+    }
+    section{
+        padding: 20px 20px 140px 
+    }
+
+    .content{
+        margin-top: 70px;
+        flex-direction: column;
+    }
+
+
+    .textbox h1{
+        font-size: 2.5rem;
+        line-height: 3.75rem;
+    }
+    .textbox h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        line-height: 0.8;
+}
+.textbox p{
+    margin-top: 25px;
+}
+   .content .textbox{
+    max-width: 100%;
+   }
+   .circle{
+    clip-path: circle(450px at center bottom);
+   }
+   .imgbox {
+    width: 100%;
+    justify-content: center;
+
+}
+.imgbox img {
+    width: 300px;}
+
+.thumb{
+    transform: translate(-50%)
+}
+.thumb li img {
+    max-width: 65px;
+}
+.social{
+    filter: invert(1);
+    transform: translateY(-56%);
+    right: 0px
+}
+
+
+
+
+
+}
